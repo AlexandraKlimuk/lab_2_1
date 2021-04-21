@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+</head>
+
+<body>
+    <main class="app__main">
+        <div class="app__header">
+            <h1>News app</h1>
+            <div class="news__filter">
+                <div class="search__container">
+                    <input type="search" maxlength="40" id="search-field">
+                    <button id="filter-btn">Search</button>
+                </div>
+        
+                <div class="app__main-search">
+                    <select id="select-btn" name="source">
+                        <option value="abc-news">ABC News</option>
+                        <option value="axios">Axios</option>
+                        <option value="bbc-news">BBC News</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div id="news" class="app__main-news">
+
+        </div>
+        <h3 class="app__main-error" id="error-block" style="display: none;">There are no articles matching your request</h3>
+        <button id="load-btn">Load more</button>
+    </main>
+
+    <template id="news-item-tpl">
+        <div class="news__item">
+            
+            <div class="news__content">
+                <h2 class="news__title"></h2>
+                <h3 class="news__source"></h3>
+                <p class="news__text"></p>
+                <a class="news__link" href="#">Read more...</a>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>
